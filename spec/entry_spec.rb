@@ -1,16 +1,20 @@
 require_relative '../models/entry'
-# #1 is the standard first line of an RSpec test file. We are saying that the file is a spec file and that it tests Entry.
+# #1 is the standard first line of an RSpec test file. We are saying that the file is
+## a spec file and that it tests Entry.
 RSpec.describe Entry do
-    # #2we use describe to give our test structure. In this case, we're using it to communicate that the specs test the Entry attributes.
+    # #2we use describe to give our test structure. In this case, we're using it to
+    ## communicate that the specs test the Entry attributes.
     describe "attributes" do
         let(:entry) { Entry.new('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com') }
-        ##defining efficient helper methods using let. Instead of creating an entry local variable within each test, let's define an entry method once
+        ##defining efficient helper methods using let. Instead of creating an entry local variable within
+        ##each test, let's define an entry method once
 
         # #3 we separate our individual tests using the it method. Each it represents a unique test.
         it "responds to name" do
         ##     entry = Entry.new('Ada Lovelace', '010.012.1814', 'augusta.king@lovelace.com')
 
-            # #4 each RSpec test ends with one or more expect method, which we use to declare the expectations for the test. If those expectations are met, our test passes, if they are not, it fails.
+            # #4 each RSpec test ends with one or more expect method, which we use to declare the expectations
+            ##for the test. If those expectations are met, our test passes, if they are not, it fails.
             expect(entry).to respond_to(:name)
             end
 
@@ -42,7 +46,8 @@ RSpec.describe Entry do
             expect(entry.email).to eq('augusta.king@lovelace.com')
         end
         end
-    ##To build the menu we'll need a method to return a string representation of an Entry to_s, short for "(convert) to string"
+    ##To build the menu we'll need a method to return a string representation of an Entry to_s, short for
+    #{#}"(convert) to string"
 
     # #5
     describe "#to_s" do
@@ -63,6 +68,7 @@ end
 
 
 
-##At #5, we use a new describe block to separate the to_s test from the initializer tests. The # in front of to_s indicates that it is an instance method.
+##At #5, we use a new describe block to separate the to_s test from the initializer tests. The # in front of
+##to_s indicates that it is an instance method.
 
 ##At #6, we use eq to check that to_s returns a string equal to expected_string.

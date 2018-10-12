@@ -7,7 +7,8 @@ RSpec.describe AddressBook do
             expect(book).to respond_to(:entries)
             end
 
-        ## AddressBook should initialize entries as an empty array so that it's ready to be used. Add a couple new tests to confirm this behavior:
+        ## AddressBook should initialize entries as an empty array so that it's ready to be used.
+        ##Add a couple new tests to confirm this behavior:
 
         it "initializes entries as an array" do
             book = AddressBook.new
@@ -76,4 +77,5 @@ RSpec.describe AddressBook do
 
 
 
-##AddressBook needs an attribute to hold the array of entries. The entries array will store entries. It also provides an easy way to add, remove, and count entries.
+##AddressBook needs an attribute to hold the array of entries. The entries array will store entries.
+## It also provides an easy way to add, remove, and count entries.
