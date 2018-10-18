@@ -13,7 +13,11 @@ class AddressBook
     def initialize
         @entries = []
     end
+    def nuke
+    @entries = []
 
+        end
+        
     def remove_entry(name, phone, email)
       delete_entry = nil
 
@@ -55,11 +59,11 @@ class AddressBook
     end
         end
 
-        def Iterative_search(name)
+        def iterative_search(name)
           @entries.each do |entry|
             if entry.name == name
               return entry
-              
+
             end
           end
           return nil
