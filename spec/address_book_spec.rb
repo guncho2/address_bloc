@@ -19,7 +19,9 @@ RSpec.describe AddressBook do
          book.nuke
          expect(book.entries.size).to eq 0
 
-         
+       end
+     end
+
   ##2
     describe "attributes" do
         it "responds to entries" do
